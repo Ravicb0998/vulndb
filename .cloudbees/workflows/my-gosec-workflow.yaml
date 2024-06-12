@@ -19,3 +19,8 @@ jobs:
       - uses: cloudbees-io/gosec-sast-scan-code@v1
         name: Run gosec (SO)
         kind: scan
+      - uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v2
+        name: Run Sonarqube
+        kind: scan
+        with:
+          language: LANGUAGE_GO
